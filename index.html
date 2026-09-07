@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIGHT_CITY // ATTENDANCE_CHECKER</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js for 3D Cyberpunk Grid Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch" data-text="EDGERUNNER">EDGERUNNER</h1>
+            <p class="subtitle">SYSTEM // ATTENDANCE_CHECKER_V2.077</p>
+        </header>
+
+        <form id="attendanceForm" class="cyber-card">
+            <div class="corner-cut"></div>
+            
+            <div class="input-group">
+                <label for="studentId">STUDENT ID_</label>
+                <input type="text" id="studentId" required placeholder="e.g. NC-2077-88" autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="fullName">FULL NAME_</label>
+                <input type="text" id="fullName" required placeholder="e.g. David Martinez" autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="department">NET_NODE / DEPT_</label>
+                <select id="department" required>
+                    <option value="" disabled selected>SELECT DEPARTMENT...</option>
+                    <option value="Netrunning">Netrunning & AI</option>
+                    <option value="Cyberware Eng">Cyberware Engineering</option>
+                    <option value="Biotech">Biotech & Medicine</option>
+                    <option value="Tactical Ops">Tactical Operations</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>ATTENDANCE STATUS_</label>
+                <div class="status-options">
+                    <label class="radio-card">
+                        <input type="radio" name="status" value="PRESENT" checked>
+                        <span class="btn-radio present">PRESENT</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="status" value="ABSENT">
+                        <span class="btn-radio absent">ABSENT</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="cyber-button">
+                <span class="btn-text">INITIALIZE_LOG</span>
+                <span class="btn-glitch"></span>
+            </button>
+
+            <div id="statusMessage" class="status-msg"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
